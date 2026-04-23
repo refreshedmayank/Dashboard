@@ -1,9 +1,9 @@
 import ChartBox from "@/components/Expense_Chart";
 import Link from "next/link";
 function Home(){
-  return(<div  className="outer wall flex h-screen">
+  return(<div  className="outer wall flex h-screen  ">
 
-<div className="bg-black text-white border flex flex-col items-center justify-center p-6">
+<div className="bg-black text-white border flex flex-col items-center justify-center p-6 overflow-y-auto">
   <span>icon-01</span>
   <span>icon-02</span>
   <span>icon-03</span>
@@ -22,15 +22,15 @@ function Home(){
     </div>
   </div>
   <div className="Cards-grid grid grid-cols-3 gap-3 p-4">
-  <div className="Card border p-6 rounded flex flex-col justify-center items-center gap-2 h-48 rounded-xl bg-black text-white">
+  <div className="Card border p-6  flex flex-col justify-center items-center gap-2 h-48 rounded-xl bg-black text-white">
     <span>Monthly Income</span>
     <span>$40,000</span>
   </div>
-  <div className="Card-2 border p-6 rounded flex flex-col gap-2 justify-center items-center rounded-xl bg-black text-white">
+  <div className="Card-2 border p-6  flex flex-col gap-2 justify-center items-center rounded-xl bg-black text-white h-48">
     <span>Monthly Expenses</span>
     <span>67%</span>
   </div>
-  <div className="Card-3 border p-6 rounded flex flex-col gap-2 justify-center items-center rounded-xl bg-black text-white">
+  <div className="Card-3 border p-6  flex flex-col gap-2 justify-center items-center rounded-xl bg-black text-white h-48">
     <span>Savings</span>
     <span>$13,200</span>
   </div>
