@@ -1,3 +1,4 @@
+import ChartBox from "@/components/Expense_Chart";
 import Link from "next/link";
 function Home(){
   return(<div  className="outer wall flex h-screen">
@@ -34,7 +35,11 @@ function Home(){
     <span>$13,200</span>
   </div>
   </div>
-  <div className="border p-9">Daily Expenses</div>
+  <div className="border p-9">
+    <span>Daily Expenses</span>
+    <ChartBox />
+  </div>
+  
 </div>
 
 
