@@ -1,51 +1,66 @@
 import ChartBox from "@/components/Expense_Chart";
 import Link from "next/link";
-function Home(){
-  return(<div  className=" flex h-screen p-20 bg-white border ">
-<div className="Card flex w-full  p-1 bg-black rounded-xl">
-<div className="bg-black text-white  flex flex-col items-center justify-center py-4 px-2  ">
-  <span>icon-01</span>
-  <span>icon-02</span>
-  <span>icon-03</span>
-  <span>icon-04</span>
-  <span>icon-05</span>
-  <span>icon-06</span>
-</div>
-<div className="bg-black text-white dashboard flex-1 overflow-y-auto ">
-  <div className="Header bg-black text-white flex justify-between items-center  mb-4 p-6 ">
-    <span>Expenser</span>
-    <div className="navitems flex gap-6 items-center">
-      <Link href="">home</Link>
-      <Link href="">support</Link>
-      <Link href="">my account</Link>
-      <input className="" type="text" placeholder="search" />
+import { LayoutDashboard, ArrowUpDown, PieChart, Wallet, Target, Settings } from "lucide-react";
+
+function Home() {
+  return (
+    <div className="flex min-h-screen bg-black">
+
+      {/* Sidebar */}
+      <div className="flex flex-col gap-6 items-center py-8 px-4 border-r border-gray-800 h-full">
+        <LayoutDashboard className="text-white w-5 h-5" />
+        <ArrowUpDown className="text-white w-5 h-5" />
+        <PieChart className="text-white w-5 h-5" />
+        <Wallet className="text-white w-5 h-5" />
+        <Target className="text-white w-5 h-5" />
+        <Settings className="text-gray-500 w-5 h-5 mt-auto" />
+      </div>
+
+      {/* Main */}
+      <div className="flex-1 flex flex-col">
+
+        {/* Header */}
+        <div className="flex justify-between items-center px-6 py-4 border-b border-gray-800">
+          <span className="text-white font-semibold">Expenser</span>
+          <div className="flex gap-6 items-center">
+            <Link className="text-gray-400 text-sm" href="">home</Link>
+            <Link className="text-gray-400 text-sm" href="">support</Link>
+            <Link className="text-gray-400 text-sm" href="">my account</Link>
+            <div className="flex items-center gap-2 bg-gray-900 border border-gray-700 px-3 py-1 rounded-lg">
+              <input
+                className="bg-transparent text-white text-sm placeholder-gray-500 outline-none"
+                type="text"
+                placeholder="search"
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Stat Cards */}
+        <div className="grid grid-cols-3 gap-4 p-6">
+          <div className="flex flex-col gap-2 justify-center items-center h-32 rounded-xl border border-gray-700">
+            <span className="text-gray-400 text-sm">Monthly Income</span>
+            <span className="text-white text-xl font-semibold">$40,000</span>
+          </div>
+          <div className="flex flex-col gap-2 justify-center items-center h-32 rounded-xl border border-gray-700">
+            <span className="text-gray-400 text-sm">Monthly Expenses</span>
+            <span className="text-white text-xl font-semibold">67%</span>
+          </div>
+          <div className="flex flex-col gap-2 justify-center items-center h-32 rounded-xl border border-gray-700">
+            <span className="text-gray-400 text-sm">Savings</span>
+            <span className="text-white text-xl font-semibold">$13,200</span>
+          </div>
+        </div>
+
+        {/* Chart */}
+        <div className="mx-6 mb-6 p-4 rounded-xl border border-gray-700">
+          <span className="text-gray-400 text-sm block mb-3">Daily Expenses</span>
+          <ChartBox />
+        </div>
+
+      </div>
     </div>
-  </div>
-  <div className="Cards-grid grid grid-cols-3 gap-3 p-4">
-  <div className="Card border p-6  flex flex-col justify-center items-center gap-2 h-48 rounded-xl bg-black text-white">
-    <span>Monthly Income</span>
-    <span>$40,000</span>
-  </div>
-  <div className="Card-2 border p-6  flex flex-col gap-2 justify-center items-center rounded-xl bg-black text-white h-48">
-    <span>Monthly Expenses</span>
-    <span>67%</span>
-  </div>
-  <div className="Card-3 border p-6  flex flex-col gap-2 justify-center items-center rounded-xl bg-black text-white h-48">
-    <span>Savings</span>
-    <span>$13,200</span>
-  </div>
-  </div>
-  <div className=" p-9 m-4 ">
-    <span>Daily Expenses</span>
-    <ChartBox />
-  </div>
-  
-  
-</div>
-</div>
-
-
-
-  </div>)
+  );
 }
+
 export default Home;
