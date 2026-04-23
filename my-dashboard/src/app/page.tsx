@@ -1,12 +1,19 @@
 import Link from "next/link";
 function Home(){
-  return(<div>
+  return(<div className="outer wall flex h-screen">
 
-<div className="border">sidebar</div>
-<div className="border">
-  <div className="Header">
+<div className="border flex flex-col items-center justify-center">
+  <span>icon-01</span>
+  <span>icon-02</span>
+  <span>icon-03</span>
+  <span>icon-04</span>
+  <span>icon-05</span>
+  <span>icon-06</span>
+</div>
+<div className="border dashboard flex-1">
+  <div className="Header flex justify-between items-center border ">
     <span>Expenser</span>
-    <div>
+    <div className="navitems flex gap-6 items-center">
       <Link href="">home</Link>
       <Link href="">support</Link>
       <Link href="">my account</Link>
