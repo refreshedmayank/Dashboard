@@ -20,7 +20,7 @@ function Home(){
       <input className="border" type="text" placeholder="search" />
     </div>
   </div>
-  <div className="Cards-grid grid grid-cols-3 gap-3">
+  <div className="Cards-grid grid grid-cols-3 gap-3 p-4">
   <div className="Card border p-6 rounded flex flex-col justify-center items-center gap-2 h-48 rounded-xl">
     <span>Monthly Income</span>
     <span>$40,000</span>
